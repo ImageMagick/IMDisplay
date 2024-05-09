@@ -10,23 +10,6 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-/*
-  WINVER values:
-
-  0x0601 - Windows 7
-  0x0600 - Windows Vista / Server 2008
-  0x0502 - Windows Server 2003 with SP1, Windows XP with SP2
-  0x0501 - Windows XP and Windows .NET Server
-  0x0400 - Windows 2000
- */
-#ifndef WINVER
-#  if defined(_MSC_VER) && (_MSC_VER < 1300)
-#    define WINVER 0x0400
-#  else
-#    define WINVER 0x0501
-#  endif 
-#endif
-
 #define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
 
 #include <afxwin.h>         // MFC core and standard components
