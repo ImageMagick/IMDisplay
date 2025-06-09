@@ -392,7 +392,7 @@ void CIMDisplayView::OnRoll()
 
     try
     {
-      pDoc->GetImage().roll(dlg.HPixels(), dlg.VPixels());
+      pDoc->GetImage().roll((ssize_t) dlg.HPixels(), (ssize_t) dlg.VPixels());
     }
     catch (Exception e)
     {
@@ -928,8 +928,10 @@ void CIMDisplayView::DoDisplayError(const char *szFunction,const char *szCause)
   AfxMessageBox(szMsg, MB_OK);
 }
 
-void CIMDisplayView::DoDisplayError(CString szFunction, DWORD inError)
+void CIMDisplayView::DoDisplayError(CString magick_unused(szFunction), DWORD inError)
 {
+  magick_unused(szFunction);
+
   LPVOID lpMsgBuf;
   FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM |
     FORMAT_MESSAGE_IGNORE_INSERTS, NULL, inError,

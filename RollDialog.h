@@ -23,10 +23,10 @@ public:
   int		m_VPixels;
   //}}AFX_DATA
 
-  void	HPixels(double inDegrees) { m_HPixels = inDegrees; }
+  void	HPixels(double inDegrees) { m_HPixels = (int) inDegrees; }
   double	HPixels() { return m_HPixels; }
 
-  void	VPixels(double inDegrees) { m_VPixels = inDegrees; }
+  void	VPixels(double inDegrees) { m_VPixels = (int) inDegrees; }
   double	VPixels() { return m_VPixels; }
 
   // Overrides
