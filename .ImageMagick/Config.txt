@@ -1,17 +1,15 @@
-[APP]
+[APPLICATION]
 
 [OPTIONAL]
 
-[DIRECTORIES]
-.
+[DEFINES]
+_AFXDLL
 
 [INCLUDES]
-MagickCore->..
-Magick++->lib
+\ImageMagick
+\ImageMagick\Magick++\lib
 
-[DEPENDENCIES]
-coders
-filters
+[REFERENCES]
 Magick++
 MagickCore
 
